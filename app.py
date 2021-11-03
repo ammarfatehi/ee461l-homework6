@@ -4,19 +4,18 @@ from flask.helpers import send_from_directory
 
 app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 
-#CORS(app)
 
 @app.route('/<string:name>',methods=['GET'])
-def hello_world(name):  # put application's code here
+def hello_world(name): 
     if name=='Ammar' or name=='ammar':
         return jsonify(
             status=200,
-            message="Fatehi"
+            payload="Fatehi"
         )
     else:
         return jsonify(
             status=404,
-            message="User Not Found"
+            payload="User Not Found"
         )
 
 @app.route("/")
