@@ -10,12 +10,12 @@ def hello_world(name):
     if name=='Ammar' or name=='ammar':
         return jsonify(
             status=200,
-            message="Fatehi"
+            payload="Fatehi"
         )
     else:
         return jsonify(
             status=404,
-            message="User Not Found"
+            payload="User Not Found"
         )
 
 @app.route("/")
