@@ -10,7 +10,10 @@ function App() {
     console.log(url);
     fetch(url)
       .then((response) => response.json())
-      .then((jsondata) => setLastName(jsondata["payload"]))
+      .then((jsondata) => {
+        setLastName(jsondata["payload"]);
+        console.log("ruh");
+      })
       .catch((err) => {
         console.log(err);
       });
