@@ -11,7 +11,7 @@ function App() {
     fetch(url)
       .then((response) => response.json())
       .then((jsondata) => {
-        setLastName(jsondata["message"]);
+        setLastName(jsondata["payload"]);
         console.log("ruh");
       })
       .catch((err) => {
